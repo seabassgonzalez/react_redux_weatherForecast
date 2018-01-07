@@ -1,0 +1,19 @@
+{
+  "name": "reactredux-weatherforecast",
+  "version": "1.0.0",
+  "description": "react redux api async weather forecaster",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seabassgonzalez/reactRedux-weatherForecast.git"
+  },
+  "author": "seabassgonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seabassgonzalez/reactRedux-weatherForecast/issues"
+  },
+  "homepage": "https://github.com/seabassgonzalez/reactRedux-weatherForecast#readme"
+}
