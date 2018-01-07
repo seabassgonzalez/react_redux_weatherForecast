@@ -5,6 +5,9 @@
 		// super(props)
 		// set initial state this.state = object with a term
 
+	// onInputChange method to handle event object
+		// console.log value of input whenever user changes it
+
 	// render
 		// return
 			// a form with className input-group
@@ -22,6 +25,10 @@ export default class SearchBar extends Component {
 	constructor(props){
 		super(props);
 		this.state = { term: '' };
+	}
+
+	onInputChange(event){
+		console.log('The value of the input is: ' + event.target.value);
 	}
 
 	render(){
