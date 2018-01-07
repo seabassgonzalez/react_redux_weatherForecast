@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/seabassgonzalez/reactRedux-weatherForecast/issues"
   },
-  "homepage": "https://github.com/seabassgonzalez/reactRedux-weatherForecast#readme"
+  "homepage": "https://github.com/seabassgonzalez/reactRedux-weatherForecast#readme",
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
