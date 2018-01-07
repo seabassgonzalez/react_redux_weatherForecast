@@ -4,6 +4,7 @@
 	// initialize component state using contructor(props)
 		// super(props)
 		// set initial state this.state = object with a term
+		// bind context of onInputChange to proper instance of this
 
 	// onInputChange method to handle event object
 		// console.log value of input whenever user changes it
