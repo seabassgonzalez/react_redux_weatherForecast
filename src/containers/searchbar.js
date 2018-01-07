@@ -7,6 +7,7 @@
 
 	// onInputChange method to handle event object
 		// console.log value of input whenever user changes it
+		// 	setState to object with term: event.target.value
 
 	// render
 		// return
