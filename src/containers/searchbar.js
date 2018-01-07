@@ -8,7 +8,11 @@
 	// render
 		// return
 			// a form with className input-group
-				// input component
+				// input component with change handler
+					// placeholder message to user
+					// className of form-control
+					// turn to controlled component by assigning value object this.state.term
+					// onChange run this.onInputChange object
 				// use bootstrap styling span className input-group-btn
 					// button component type submit className btn btn-secondary
 
