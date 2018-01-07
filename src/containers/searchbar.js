@@ -5,3 +5,16 @@
 		// return
 			// a form with className input-group
 				// input component
+
+import React, { Component } from 'react';
+
+export default class SearchBar extends Component {
+	render(){
+		return(
+			<form className='input-group'>
+
+			</form>
+
+		);
+	}
+}
