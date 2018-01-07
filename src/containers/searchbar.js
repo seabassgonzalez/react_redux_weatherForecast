@@ -5,6 +5,8 @@
 		// return
 			// a form with className input-group
 				// input component
+				// use bootstrap styling span className input-group-btn
+					// button component type submit className btn btn-secondary
 
 import React, { Component } from 'react';
 
