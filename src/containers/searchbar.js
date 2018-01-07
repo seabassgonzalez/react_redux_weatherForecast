@@ -1,6 +1,10 @@
 // import React and Component from react
 
 // export default class Searchbar extending component
+	// initialize component state using contructor(props)
+		// super(props)
+		// set initial state this.state = object with a term
+
 	// render
 		// return
 			// a form with className input-group
