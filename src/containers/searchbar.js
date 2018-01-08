@@ -4,7 +4,7 @@
 	// initialize component state using contructor(props)
 		// super(props)
 		// set initial state this.state = object with a term
-		// bind context of onInputChange to proper instance of this
+		// bind context of onInputChange to proper instance of this, overriding improper local method
 
 	// onInputChange method to handle event object
 		// console.log value of input whenever user changes it
@@ -17,7 +17,7 @@
 					// placeholder message to user
 					// className of form-control
 					// turn to controlled component by assigning value object this.state.term
-					// onChange run this.onInputChange object
+					// onChange run callback this.onInputChange object -- need to properly bind this to instance
 				// use bootstrap styling span className input-group-btn
 					// button component type submit className btn btn-secondary
 
