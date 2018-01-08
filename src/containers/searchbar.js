@@ -1,4 +1,9 @@
+// container that needs to call an action creator working with redux directly, use connect method from react-redux library to connect searchbar container to redux, bind action creator fetch weather as a property to this container
+
 // import React and Component from react
+// import connect from react-redux
+// import bindActionCreators from redux
+// import fetchWeather form actions
 
 // export default class Searchbar extending component
 	// initialize component state using contructor(props)
@@ -25,6 +30,9 @@
 					// button component type submit className btn btn-secondary
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchWeather } from '../actions/index';
 
 export default class SearchBar extends Component {
 	constructor(props){
