@@ -10,9 +10,12 @@
 		// console.log value of input whenever user changes it
 		// 	setState to object with term: event.target.value
 
+	// onFormSubmit method to handle event
+		// use event object to prevent browser from trying to submit the form
+
 	// render
 		// return
-			// a form with className input-group
+			// a form with className input-group, html forms automatically register an 'enter' as form submit, must control using onSubmit callback this.onFormSubmit
 				// input component with change handler
 					// placeholder message to user
 					// className of form-control
@@ -35,9 +38,13 @@ export default class SearchBar extends Component {
 		this.setState({ term: event.target.value });
 	}
 
+	onFormSubmit(event){
+		event.preventDefault();
+	}
+
 	render(){
 		return(
-			<form className='input-group'>
+			<form onSubmit={this.onFormSubmit} className='input-group'>
 				<input 
 					placeholder="Enter a city for a five day forecast"
 					className='form-control'
