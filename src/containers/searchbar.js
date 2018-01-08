@@ -60,6 +60,8 @@ export default class SearchBar extends Component {
 
 	onFormSubmit(event){
 		event.preventDefault();
+		this.props.fetchWeather(this.state.term);
+		this.setState({term:''});
 	}
 
 	render(){
@@ -78,3 +80,9 @@ export default class SearchBar extends Component {
 		);
 	}
 }
+
+function mapDispatchToProps(dispatch){
+	return bindActionCreators({ fetchWeather }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(SearchBar);
