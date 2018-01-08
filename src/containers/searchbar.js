@@ -20,6 +20,8 @@
 
 	// onFormSubmit method to handle event
 		// use event object to prevent browser from trying to submit the form
+		// call this.props.fetchWeather action creator passing in city set as this.state.term
+		// clear search input by using this.setState({term:''}) term set to empty string
 
 	// render
 		// return
