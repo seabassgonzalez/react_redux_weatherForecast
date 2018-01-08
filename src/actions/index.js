@@ -10,6 +10,7 @@
 	// save const request for ajax request axios.get(url) according to axios docs - basically make a get request on the url we saved 
 	// return
 		// type set to fetch weather variable
+		// payload set to ajax request made above
 
 import axios from 'axios';
 		
