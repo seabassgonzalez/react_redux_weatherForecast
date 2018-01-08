@@ -1,3 +1,5 @@
+// import axios from axios
+
 // save api key as const
 // save root URL as const for ajax get request to it and return our data, get url from docs, use es6 template strings - back ticks and bling - to reference api key
 
@@ -5,6 +7,7 @@
 
 // export function fetchWeather action creator taking city name
 	// save const url with a query string to make final request url according to docs
+	// save const request for ajax request axios.get(url) according to axios docs
 	// return
 		// type set to fetch weather variable
 		
