@@ -1,11 +1,14 @@
-// container that needs to call an action creator working with redux directly, use connect method from react-redux library to connect searchbar container to redux, bind action creator fetch weather as a property to this container
+// container that needs to call an action creator working with redux directly
+//  use connect method from react-redux library to connect searchbar container to redux
+//  bind action creator fetch weather as a property to this container
+
 
 // import React and Component from react
 // import connect from react-redux
 // import bindActionCreators from redux
 // import fetchWeather form actions
 
-// export default class Searchbar extending component
+// class Searchbar extending component
 	// initialize component state using contructor(props)
 		// super(props)
 		// set initial state this.state = object with a term
@@ -28,6 +31,13 @@
 					// onChange run callback this.onInputChange object -- need to properly bind this to instance
 				// use bootstrap styling span className input-group-btn
 					// button component type submit className btn btn-secondary
+
+// by mapping action creator fetchWeather to dispatch and then mapping it to props, we get access to function this.props.fetchweather:
+
+// create function mapStateToProps to bind fetchWeather to searchbar container
+	// return call to bindActionCreators({fetchWeather}, dispatch) -- causes when action creator called and returns an action bindActionCreators with dispatch makes sure that action flows down into the middleware and the into the reducers in our redux application
+
+// export default connect(null, mapDispatchToProps)(SearchBar) -- maps searchbar to props -- null allows ignore of first argument passed, state, since only care about second argument mapDispatchToProps as per docs
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
