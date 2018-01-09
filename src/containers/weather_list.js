@@ -16,6 +16,7 @@
 // define mapStateToProps function taking state -- es6 syntactical sugar allows passing 
 // mapStateToProps(state){const weather = state.weather } SAME AS mapStateToProps({ weather }){}
 	// return object weather: state.weather because we assigned the weather key to the weather reducer in combineReducers
+	// es6 syntax allows { weather: weather } SAME AS { weather }
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -39,6 +40,6 @@ export default class WeatherList extends Component{
 	}
 }
 
-function mapStateToProps(state){
-	return { weather: state.weather };
+function mapStateToProps({ weather }){
+	return { weather };
 }
