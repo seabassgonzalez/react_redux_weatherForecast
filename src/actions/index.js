@@ -8,9 +8,10 @@
 // export function fetchWeather action creator taking city name
 	// save const url with a query string to make final request url according to docs
 	// save const request for ajax request axios.get(url) according to axios docs - basically make a get request on the url we saved 
+	// console log request for testing
 	// return
 		// type set to fetch weather variable
-		// payload set to ajax request made above
+		// payload set to ajax request made above - a resulting promise from axios
 
 import axios from 'axios';
 		
@@ -22,6 +23,7 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 export function fetchWeather(city){
 	const url = `${ROOT_URL}&q=${city},us`;
 	const request = axios.get(url);
+	console.log('Request: ', request);
 	return {
 		type: FETCH_WEATHER,
 		payload: request
