@@ -3,7 +3,7 @@
 // export default class WeatherList extending Component
 	// render
 		// return
-			// table
+			// table className table table-hover from bootstrap
 				// table head
 					// tr
 						// th City
@@ -14,7 +14,7 @@ import React, { Component } from 'react';
 export default class WeatherList extends Component{
 	render(){
 		return (
-			<table>
+			<table className='table table-hover'>
 				<thead>
 					<tr>
 						<th>City</th>
