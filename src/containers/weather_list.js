@@ -7,6 +7,9 @@
 				// table head
 					// tr
 						// th City
+						// th Temperature
+						// th Pressure
+						// th Humidity
 				// tbody
 
 import React, { Component } from 'react';
@@ -18,6 +21,9 @@ export default class WeatherList extends Component{
 				<thead>
 					<tr>
 						<th>City</th>
+						<th>Temperature</th>
+						<th>Pressure</th>
+						<th>Humidity</th>
 					</tr>
 				</thead>
 				<tbody>
