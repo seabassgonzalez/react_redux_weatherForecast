@@ -13,6 +13,7 @@
 		// super(props)
 		// set initial state this.state = object with a term
 		// bind context of onInputChange to proper instance of this, overriding improper local method
+		// bind context of onFormSubmit to proper instance, otherwise this will be null
 
 	// onInputChange method to handle event object
 		// console.log value of input whenever user changes it
@@ -46,11 +47,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../actions/index';
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
 	constructor(props){
 		super(props);
 		this.state = { term: '' };
 		this.onInputChange = this.onInputChange.bind(this);
+		this.onFormSubmit = this.onFormSubmit.bind(this);
 	}
 
 	onInputChange(event){
