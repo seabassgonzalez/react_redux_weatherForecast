@@ -1,4 +1,5 @@
 // import React and Component from react
+// import connect from react-redux
 
 // export default class WeatherList extending Component
 	// render
@@ -11,6 +12,9 @@
 						// th Pressure
 						// th Humidity
 				// tbody
+
+// define mapStateToProps function
+	// return object weather: state.weather because we assigned the weather key to the weather reducer in combineReducers
 
 import React, { Component } from 'react';
 
