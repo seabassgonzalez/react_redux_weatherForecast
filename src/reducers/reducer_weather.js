@@ -4,7 +4,7 @@
 	// console.log action received for testing
 	// setup a switch statement to handle action
 		// case FETCH_WEATHER
-			// handle payload -- return a new instance of state - -array that accumulates weather data for many searches -- state is an array, concat action.payload.data array onto it
+			// handle payload -- return a new instance of state - -array that accumulates weather data for many searches -- state is an array, concat action.payload.data array onto it, new array each time NOT mutating state
 			// es6 syntax sugar shows can be equivalent return [ action.payload.data, ...state ] -- will also return [city, city, city]
 	// return state
 
