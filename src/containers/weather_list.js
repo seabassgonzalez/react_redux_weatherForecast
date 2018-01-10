@@ -14,7 +14,7 @@
 
 		// returns
 			// tr with a key by accessing {name}
-				// td reference to GoogleMap component
+				// td reference to GoogleMap component, passing long and lat properties
 				// td
 					// Chart component with data set to temps and color specified units=K
 				// td
@@ -58,7 +58,7 @@ class WeatherList extends Component {
 
 		return (
 			<tr key={name}>
-				<td><GoogleMap /></td> 
+				<td><GoogleMap lon={lon} lat={lat} /></td> 
 				<td>
 					<Chart data={temps} color="orange" units="C"/>
 				</td> 
