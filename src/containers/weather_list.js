@@ -4,6 +4,7 @@
 // class WeatherList extending Component
 	// define renderWeather function first argument for each call will be object of city data
 		// define const for reference to city name -- to be dry
+		// define const temps accessing cityData.list map over it passing a function argument weather and access temperature with weather.main.temp 
 		// returns
 			// tr with a key by accessing {name}
 				// td reference to {name} as per object returned by ajax request
@@ -32,6 +33,7 @@ import { connect } from 'react-redux';
 class WeatherList extends Component {
 	renderWeather(cityData) {
 		const name = cityData.city.name;
+		const temp = cityData.list.map(weather => weather.main.temp);
 		return (
 			<tr key={name}>
 				<td>{name}</td> 
