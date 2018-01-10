@@ -1,5 +1,6 @@
 // import React and Component from react
 // import connect from react-redux -- pull date in from redux
+// import Sparklines and SparklinesLine
 
 // class WeatherList extending Component
 	// define renderWeather function first argument for each call will be object of city data
@@ -8,7 +9,10 @@
 		// returns
 			// tr with a key by accessing {name}
 				// td reference to {name} as per object returned by ajax request
-	// render
+				// td
+					// Sparklines height width and data set to array of temps
+						// SparklinesLine
+	// render		
 		// return
 			// table className table table-hover from bootstrap
 				// table head
@@ -29,6 +33,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 class WeatherList extends Component {
 	renderWeather(cityData) {
@@ -38,10 +43,15 @@ class WeatherList extends Component {
 		return (
 			<tr key={name}>
 				<td>{name}</td> 
+				<td>
+					<Sparklines height={120} width={180} data={temps}>
+						<SparklinesLine color="red" />
+					</Sparklines>
+				</td> // comment to clean up syntax highlighting
 			</tr>
 		); 
 	}
-
+    //comment to clean up syntax highlighting
 	render(){
 		return (
 			<table className='table table-hover'>
