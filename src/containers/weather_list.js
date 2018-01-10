@@ -34,6 +34,7 @@ class WeatherList extends Component {
 	renderWeather(cityData) {
 		const name = cityData.city.name;
 		const temp = cityData.list.map(weather => weather.main.temp);
+		console.log(temps);
 		return (
 			<tr key={name}>
 				<td>{name}</td> 
