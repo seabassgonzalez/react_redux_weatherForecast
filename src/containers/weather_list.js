@@ -1,5 +1,6 @@
 // import React and Component from react
 // import connect from react-redux -- pull date in from redux
+// import chart from ../components/chart
 
 // class WeatherList extending Component
 	// define renderWeather function first argument for each call will be object of city data
@@ -9,8 +10,8 @@
 			// tr with a key by accessing {name}
 				// td reference to {name} as per object returned by ajax request
 				// td
-					// Sparklines height width and data set to array of temps
-						// SparklinesLine
+					// Chart component with data and color specified
+					
 	// render		
 		// return
 			// table className table table-hover from bootstrap
@@ -32,6 +33,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Chart from '../components/chart';
 
 class WeatherList extends Component {
 	renderWeather(cityData) {
@@ -42,7 +44,7 @@ class WeatherList extends Component {
 			<tr key={name}>
 				<td>{name}</td> 
 				<td>
-					
+					<Chart data={temps} color="orange" />
 				</td> // comment to clean up syntax highlighting
 			</tr>
 		); 
