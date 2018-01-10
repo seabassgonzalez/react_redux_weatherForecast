@@ -29,7 +29,7 @@ class GoogleMap extends Component{
 	console.log('map is ', google.maps);
 	}
 	render(){
-		return <div ref="map" className="testing" />;
+		return <div ref="map" className="map" />;
 	}
 }
 
