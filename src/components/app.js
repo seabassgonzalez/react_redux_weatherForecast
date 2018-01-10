@@ -15,6 +15,7 @@ import WeatherList from '../containers/weather_list';
 
 export default class App extends Component {
 	render(){
+		// console.log('map in app component is ', google.maps);
 		return(
 			<div>
 				<SearchBar />

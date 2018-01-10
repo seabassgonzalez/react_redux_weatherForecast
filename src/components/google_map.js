@@ -24,10 +24,13 @@ class GoogleMap extends Component{
 				lng: this.props.lon
 			}
 		});
-	console.log('map is ', google.maps);
+	// console.log('map is ', google.maps);
 	}
 	render(){
-		return <div ref="map" />;
+		// console.log('map in render is ', google.maps);
+		return (
+			<div ref="map" />
+		);
 	}
 }
 
