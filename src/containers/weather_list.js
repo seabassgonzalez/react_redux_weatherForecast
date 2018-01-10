@@ -6,11 +6,17 @@
 	// define renderWeather function first argument for each call will be object of city data
 		// define const for reference to city name -- to be dry
 		// define const temps accessing cityData.list map over it passing a function argument weather and access temperature with weather.main.temp 
+		// define const for pressures mapping over cityData.list passing a function that takes weather and accesses weather.main.pressure from returned data
+		// define const for humidity mapping over cityData.list passing a function that takes weather and accesses weather.main.humidity from returned data
 		// returns
 			// tr with a key by accessing {name}
 				// td reference to {name} as per object returned by ajax request
 				// td
-					// Chart component with data and color specified
+					// Chart component with data set to temps and color specified
+				// td
+					// Chart component with data set to pressures and color specified
+				// td
+					// Chart component with data set to humidities and color specified
 					
 	// render		
 		// return
@@ -39,13 +45,23 @@ class WeatherList extends Component {
 	renderWeather(cityData) {
 		const name = cityData.city.name;
 		const temps = cityData.list.map(weather => weather.main.temp);
+		const pressures = cityData.list.map(weather => weather.main.pressure);
+		const humidities = cityData.list.map(weather => weather.main.humidity);
+		
 		console.log(temps);
+
 		return (
 			<tr key={name}>
 				<td>{name}</td> 
 				<td>
 					<Chart data={temps} color="orange" />
-				</td> // comment to clean up syntax highlighting
+				</td> 
+				<td>
+					<Chart data={pressures} color="blue" />
+				</td> 
+				<td>
+					<Chart data={humidities} color="green" />
+				</td> 
 			</tr>
 		); 
 	}
