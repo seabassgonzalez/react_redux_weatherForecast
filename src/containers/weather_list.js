@@ -55,7 +55,8 @@ class WeatherList extends Component {
 		const { lon, lat } = cityData.city.coord;
 
 		console.log(temps);
-
+		console.log('lon is ', lon);
+		console.log('lat is ', lat);
 		return (
 			<tr key={name}>
 				<td><GoogleMap lon={lon} lat={lat} /></td> 
