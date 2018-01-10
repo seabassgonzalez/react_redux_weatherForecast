@@ -12,11 +12,11 @@
 			// tr with a key by accessing {name}
 				// td reference to {name} as per object returned by ajax request
 				// td
-					// Chart component with data set to temps and color specified
+					// Chart component with data set to temps and color specified units=K
 				// td
-					// Chart component with data set to pressures and color specified
+					// Chart component with data set to pressures and color specified units=hPa
 				// td
-					// Chart component with data set to humidities and color specified
+					// Chart component with data set to humidities and color specified units=%
 					
 	// render		
 		// return
@@ -24,9 +24,9 @@
 				// table head
 					// tr
 						// th City
-						// th Temperature
-						// th Pressure
-						// th Humidity
+						// th Temperature specifying kelvin
+						// th Pressure specifying hpa
+						// th Humidity specifying percentage
 				// tbody
 					// reference this.props.weather map over it, call function this.renderWeather for each
 
@@ -54,13 +54,13 @@ class WeatherList extends Component {
 			<tr key={name}>
 				<td>{name}</td> 
 				<td>
-					<Chart data={temps} color="orange" />
+					<Chart data={temps} color="orange" units="K"/>
 				</td> 
 				<td>
-					<Chart data={pressures} color="blue" />
+					<Chart data={pressures} color="blue" units="hPa"/>
 				</td> 
 				<td>
-					<Chart data={humidities} color="green" />
+					<Chart data={humidities} color="green" units="%"/>
 				</td> 
 			</tr>
 		); 
@@ -72,9 +72,9 @@ class WeatherList extends Component {
 				<thead>
 					<tr>
 						<th>City</th>
-						<th>Temperature</th>
-						<th>Pressure</th>
-						<th>Humidity</th>
+						<th>Temperature (K)</th>
+						<th>Pressure (hPa)</th>
+						<th>Humidity (%)</th>
 					</tr>
 				</thead>
 				<tbody>
