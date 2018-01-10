@@ -2,6 +2,10 @@
 // import connect from react-redux -- pull date in from redux
 
 // class WeatherList extending Component
+	// define renderWeather function first argument for each call will be object of city data
+		// returns
+			// tr
+				// td reference to cityDate.city.name as per object returned by ajax request
 	// render
 		// return
 			// table className table table-hover from bootstrap
@@ -12,6 +16,7 @@
 						// th Pressure
 						// th Humidity
 				// tbody
+					// reference this.props.weather map over it, call function this.renderWeather for each
 
 // define mapStateToProps function taking state -- es6 syntactical sugar allows passing 
 // mapStateToProps(state){const weather = state.weather } SAME AS mapStateToProps({ weather }){}
@@ -23,7 +28,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class WeatherList extends Component{
+class WeatherList extends Component {
+	renderWeather(cityData) {
+		return (
+			<tr>
+				<td>{cityData.city.name}</td> 
+			</tr>
+		); 
+	}
+
 	render(){
 		return (
 			<table className='table table-hover'>
@@ -36,6 +49,7 @@ class WeatherList extends Component{
 					</tr>
 				</thead>
 				<tbody>
+					{this.props.weather.map(this.renderWeather)}
 				</tbody>
 			</table>
 		);
