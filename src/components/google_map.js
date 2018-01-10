@@ -15,8 +15,8 @@ import React, { Component } from 'react';
 
 class GoogleMap extends Component{
 	componentDidMount(){
-		// console.log('the lat is: ', this.props.lat);
-		// console.log('the lon is: ', this.props.lon);
+		console.log('the lat is: ', this.props.lat);
+		console.log('the lon is: ', this.props.lon);
 		new google.maps.Map(this.refs.map, {
 			zoom: 12,
 			center: {
@@ -24,13 +24,11 @@ class GoogleMap extends Component{
 				lng: this.props.lon
 			}
 		});
-	// console.log('map is ', google.maps);
+	console.log('map is ', google.maps);
 	}
 	render(){
-		// console.log('map in render is ', google.maps);
-		return (
-			<div ref="map" />
-		);
+		console.log('div ref=map is ', this.refs.map);
+		return <div ref="map" />;
 	}
 }
 
