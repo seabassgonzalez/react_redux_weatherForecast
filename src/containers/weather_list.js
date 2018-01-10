@@ -5,7 +5,7 @@
 // class WeatherList extending Component
 	// define renderWeather function first argument for each call will be object of city data
 		// define const for reference to city name -- to be dry
-		// define const temps accessing cityData.list map over it passing a function argument weather and access temperature with weather.main.temp 
+		// define const temps accessing cityData.list map over it passing a function argument weather and access temperature with weather.main.temp -- map over it and conver to celsius
 		// define const for pressures mapping over cityData.list passing a function that takes weather and accesses weather.main.pressure from returned data
 		// define const for humidity mapping over cityData.list passing a function that takes weather and accesses weather.main.humidity from returned data
 		// returns
@@ -44,7 +44,7 @@ import Chart from '../components/chart';
 class WeatherList extends Component {
 	renderWeather(cityData) {
 		const name = cityData.city.name;
-		const temps = cityData.list.map(weather => weather.main.temp);
+		const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp => temp - 273));
 		const pressures = cityData.list.map(weather => weather.main.pressure);
 		const humidities = cityData.list.map(weather => weather.main.humidity);
 		
@@ -54,7 +54,7 @@ class WeatherList extends Component {
 			<tr key={name}>
 				<td>{name}</td> 
 				<td>
-					<Chart data={temps} color="orange" units="K"/>
+					<Chart data={temps} color="orange" units="C"/>
 				</td> 
 				<td>
 					<Chart data={pressures} color="blue" units="hPa"/>
@@ -72,7 +72,7 @@ class WeatherList extends Component {
 				<thead>
 					<tr>
 						<th>City</th>
-						<th>Temperature (K)</th>
+						<th>Temperature (C)</th>
 						<th>Pressure (hPa)</th>
 						<th>Humidity (%)</th>
 					</tr>
