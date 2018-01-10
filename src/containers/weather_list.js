@@ -1,7 +1,7 @@
 // import React and Component from react
-// import connect from react-redux
+// import connect from react-redux -- pull date in from redux
 
-// export default class WeatherList extending Component
+// class WeatherList extending Component
 	// render
 		// return
 			// table className table table-hover from bootstrap
@@ -18,10 +18,12 @@
 	// return object weather: state.weather because we assigned the weather key to the weather reducer in combineReducers
 	// es6 syntax allows { weather: weather } SAME AS { weather }
 
+// export default connect mapStateToProps with component WeatherList
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export default class WeatherList extends Component{
+class WeatherList extends Component{
 	render(){
 		return (
 			<table className='table table-hover'>
@@ -43,3 +45,5 @@ export default class WeatherList extends Component{
 function mapStateToProps({ weather }){
 	return { weather };
 }
+
+export default connect(mapStateToProps)(WeatherList);
