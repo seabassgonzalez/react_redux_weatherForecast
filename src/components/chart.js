@@ -15,7 +15,7 @@
 				// SparklinesLine setting code as {props.color} to change at will
 				// SparklinesReferenceLine type of avg for average
 				// div
-					// call helper function average passing array of numbers into it with props.data
+					// call helper function average passing array of numbers into it with props.data and a call to props.units to see units passed
 
 import React from 'react';
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
@@ -32,7 +32,7 @@ export default (props) => {
 				<SparklinesLine color={props.color} />
 				<SparklinesReferenceLine type="avg" />
 			</Sparklines>
-			<div>{average(props.data)}</div>
+			<div>{average(props.data)} {props.units}</div>
 		</div>
 	);
 }
