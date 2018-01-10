@@ -10,6 +10,7 @@
 		// define const for pressures mapping over cityData.list passing a function that takes weather and accesses weather.main.pressure from returned data
 		// define const for humidity mapping over cityData.list passing a function that takes weather and accesses weather.main.humidity from returned data
 		// define const to access Google longitude for map centering cityData.city.coord.lon 
+		// define const to access Google latitude for map centering cityData.city.coord.lat
 
 		// returns
 			// tr with a key by accessing {name}
@@ -52,6 +53,7 @@ class WeatherList extends Component {
 		const pressures = cityData.list.map(weather => weather.main.pressure);
 		const humidities = cityData.list.map(weather => weather.main.humidity);
 		const lon = cityData.city.coord.lon;
+		const lat = cityData.city.coord.lat;
 
 		console.log(temps);
 
