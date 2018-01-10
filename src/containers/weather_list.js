@@ -4,7 +4,7 @@
 // class WeatherList extending Component
 	// define renderWeather function first argument for each call will be object of city data
 		// returns
-			// tr
+			// tr with a key by accessing cityDate.city name
 				// td reference to cityDate.city.name as per object returned by ajax request
 	// render
 		// return
@@ -31,7 +31,7 @@ import { connect } from 'react-redux';
 class WeatherList extends Component {
 	renderWeather(cityData) {
 		return (
-			<tr>
+			<tr key={city.Data.city.name}>
 				<td>{cityData.city.name}</td> 
 			</tr>
 		); 
