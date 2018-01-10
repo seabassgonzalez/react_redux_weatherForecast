@@ -1,6 +1,5 @@
 // import React and Component from react
 // import connect from react-redux -- pull date in from redux
-// import Sparklines and SparklinesLine
 
 // class WeatherList extending Component
 	// define renderWeather function first argument for each call will be object of city data
@@ -33,7 +32,6 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 class WeatherList extends Component {
 	renderWeather(cityData) {
@@ -44,9 +42,7 @@ class WeatherList extends Component {
 			<tr key={name}>
 				<td>{name}</td> 
 				<td>
-					<Sparklines height={120} width={180} data={temps}>
-						<SparklinesLine color="red" />
-					</Sparklines>
+					
 				</td> // comment to clean up syntax highlighting
 			</tr>
 		); 
